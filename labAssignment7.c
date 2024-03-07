@@ -48,10 +48,10 @@ int selectionSort(int* arr,int l,node** head){
 }
 int bubbleSort(int* arr,int l,node** head){
     int res = 0;
-    for(int i = 0;i<l;i++){
-        for(int j=i;j<l;j++){
-            if(arr[i]>arr[j]){
-                res +=swap(&arr[i],&arr[j],head);
+    for(int i = 0;i<l-1;i++){
+        for(int j=0;j<l-i-1;j++){
+            if(arr[j]>arr[j+1]){
+                res +=swap(&arr[j],&arr[j+1],head);
             }
         }
     }
